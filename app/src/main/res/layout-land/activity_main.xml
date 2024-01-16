@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- @author Eveliina
+     @author Katja
+     @author Hanne -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/buttonAddBeforeSleep"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="35dp"
+        android:backgroundTint="#B8594D"
+        android:onClick="buttonAddBeforeSleepClicked"
+        android:text="@string/lisaa_tietoja_ennen_nukkumista"
+        app:layout_constraintBottom_toTopOf="@+id/buttonAddAfterSleep"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonAddAfterSleep"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#B8594D"
+        android:onClick="buttonAddAfterSleepClicked"
+        android:text="@string/lisaa_tietoja_heraamisen_jalkeen"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSeeData"
+        app:layout_constraintEnd_toEndOf="@+id/buttonAddBeforeSleep"
+        app:layout_constraintStart_toStartOf="@+id/buttonAddBeforeSleep"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAddBeforeSleep" />
+
+    <Button
+        android:id="@+id/buttonSeeData"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#B8594D"
+        android:onClick="buttonSeeDataClicked"
+        android:text="@string/tarkastele_tietojasi"
+        app:layout_constraintBottom_toTopOf="@+id/buttonTips"
+        app:layout_constraintEnd_toEndOf="@+id/buttonTips"
+        app:layout_constraintStart_toStartOf="@+id/buttonTips"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAddAfterSleep" />
+
+    <Button
+        android:id="@+id/buttonTips"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#B8594D"
+        android:onClick="buttonSeeTipsClicked"
+        android:text="@string/vinkkeja_parempaan_uneen"
+        app:layout_constraintBottom_toTopOf="@+id/buttonManual"
+        app:layout_constraintEnd_toEndOf="@+id/buttonAddAfterSleep"
+        app:layout_constraintStart_toStartOf="@+id/buttonAddAfterSleep"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSeeData" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <Button
+        android:id="@+id/buttonManual"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="4dp"
+        android:onClick="buttonManualClicked"
+        android:text="Ohjeet"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="98dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="89dp"
+        android:layout_marginBottom="297dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonAddBeforeSleep"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.989"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/buttonAddBeforeSleep"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/main_bird_picture" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
