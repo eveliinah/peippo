@@ -10,4 +10,6 @@ Peippo is an application designed for tracking your sleep and mood. By providing
 <img src="peippo.jpg" width="203">
 <img src="kysely.jpg" width="225">
 <img src="palaute.jpg" width="246">
-<img src="vinkit.jpg" width="191">
+<img src="vinkit.jpg" width="191"> <br><br>
+
+Groupwork by Eveliina, Katja and Hanne.
